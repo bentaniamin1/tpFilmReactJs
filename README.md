@@ -1,6 +1,6 @@
 # MovieApp  Redux + React-Js + Php + Docker
 
-Backend PHP Docker, donc pour faire tourner tout ça :
+Backend PHP Docker:
 ````shell
 docker-compose up -d &&
 cd ./frontend &&
