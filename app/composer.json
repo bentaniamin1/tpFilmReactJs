@@ -1,0 +1,17 @@
+{
+    "name": "kavalier.e.39/app",
+    "autoload": {
+        "psr-4": {
+            "KavalierE39\\App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ArkhayDS",
+            "email": "raphael.ds.tic@gmail.com"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^6.1"
+    }
+}
