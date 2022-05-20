@@ -40,14 +40,15 @@ export default function App() {
     const[logout, dispatchLogout] = useReducer(SigninReducer, loggedUser )
     
     const [localUser, setLocalUser] = useState<LocalUserInterface>({password: "", username: ""})
-
+    
     const[registerRedux, dispatchRegister] = useReducer(registerReducer, localUser )
-
+    
     const [movieList, setMovieList] = useState<MovieInterface[]>([])
     // Determines if the user wants to LogIn or to Register
     const [needsLogin, setNeedsLogin] = useState<boolean>(true)
     const [needsUpdate, setNeedsUpdate] = useState<boolean>(false)
-
+    const[loginRegister, dispatchLogin] = useReducer(SigninReducer, localUser )
+    
     const login = useLogin();
     const register = useRegister();
     const getMovieList = useGetMovieList();
@@ -99,7 +100,7 @@ export default function App() {
         dispatchLogout({type:"Logout"});
         setLoggedUser(logout);
         console.log(logout);
-        eraseCookie();
+        
     }
 
     // @ts-ignore

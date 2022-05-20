@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {LocalCommentPost} from "../Interface/LocalCommentPost";
 import usePostComment from "../Hook/usePostComment";
 import {CommentInterface, LoginResponseInterface} from "../Interface/ResponsesInterfaces";
+import { useDispatch, useSelector } from  'react-redux';
 
 
 interface CommentFormPropsInterface {
@@ -11,6 +12,8 @@ interface CommentFormPropsInterface {
 
 export default function CommentForm({loggedUser, setNeedsUpdate}: CommentFormPropsInterface) {
     const [localComment, setLocalComment] = useState<LocalCommentPost>({content: "", title: ""})
+    
+    
     // const postComment = usePostComment();
 
 

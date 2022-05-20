@@ -10,6 +10,12 @@ export function  Logout() {
     }
 
 }
+export function  Login() {
+    return {
+        type: 'Login'
+    }
+
+}
 
 export function  Register(payload: any) {
     return {

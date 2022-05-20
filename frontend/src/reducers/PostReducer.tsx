@@ -5,13 +5,13 @@ export function postReducer(state = {}, action: any) {
 
     switch (action.type) {
       case "postComment":
-          postComment(loggedUser.token, localComment)
-                .then(data => {
-                    console.log(data)
-                    setLocalComment({content: "", title: ""})
-                    setNeedsUpdate(true);
-                })
-        return ;
+          // postComment(loggedUser.token, localComment)
+          //       .then(data => {
+          //           console.log(data)
+          //           setLocalComment({content: "", title: ""})
+          //           setNeedsUpdate(true);
+          //       })
+        return action.payload ;
       case "getMovie":
         return "getMovie";
       default:
